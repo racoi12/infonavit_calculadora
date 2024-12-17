@@ -126,6 +126,39 @@ def calcular_amortizacion_con_pagos_anuales(
 
 # Interfaz con Streamlit
 st.title("Simulador de Crédito Infonavit con Pagos Extra Recurrentes")
+# Descripción principal
+st.markdown("""
+**Bienvenido al Simulador de Crédito Infonavit con Pagos Extra Recurrentes**
+
+Esta herramienta te permite estimar la evolución de tu crédito Infonavit a lo largo del tiempo, tomando en cuenta tanto el pago mensual regular como la posibilidad de realizar aportaciones extras recurrentes, ayudándote a visualizar el impacto que estas tienen en la reducción del plazo total y el interés pagado.
+
+**¿Qué hace esta calculadora?**  
+- **Cálculo de pago mensual aproximado:** Estima la cantidad que abonarás mensualmente a tu crédito con base en el monto total, tasa de interés, plazo y otros parámetros establecidos.  
+- **Simulación del efecto de pagos adicionales:** Permite agregar pagos extra periódicos para observar cómo éstos disminuyen el saldo, acortan la duración del crédito y reducen el costo total por intereses.  
+- **Visualización de la evolución del crédito:** Muestra de forma gráfica y/o tabular cómo cambia el saldo adeudado a lo largo de los meses, facilitando la toma de decisiones sobre el manejo de tu deuda.
+
+**Parámetros del Crédito**  
+- **Crédito Total (MXN):** El monto inicial del préstamo. Ajusta este valor con las flechas o ingresando un número directamente.  
+- **Tasa de Interés Anual (decimal):** La tasa anual del crédito en formato decimal. Por ejemplo, para una tasa del 10.45%, ingresa 0.1045.  
+- **Plazo (años):** La duración del crédito en años. Ajusta según el tiempo que se planea pagar.  
+- **Tasa Anual de Seguro (decimal):** Si el crédito cuenta con un seguro hipotecario, ingresa su tasa anual (por ejemplo, 0.005 para el 0.5%).
+
+**Fecha de Inicio del Crédito**  
+- Ajusta el año, mes y día de inicio del crédito para visualizar el calendario de pagos de forma más realista.
+
+**Pagos Extras Recurrentes (opcional)**  
+- Aquí podrás definir el monto y la frecuencia (mensual, trimestral, anual, etc.) de los pagos adicionales que deseas realizar, con el objetivo de ver cómo estos abonos extras impactan positivamente en la reducción del plazo y los intereses totales.
+
+**¿Cómo usar la Calculadora?**  
+1. Ingresa el **Crédito Total**, la **Tasa de Interés Anual**, el **Plazo**, la **Tasa Anual de Seguro** y la **Fecha de Inicio**.  
+2. (Opcional) Configura pagos extras recurrentes en la sección correspondiente.  
+3. La calculadora generará automáticamente una simulación detallada, mostrándote la evolución del saldo, los intereses pagados y el efecto de cualquier pago extra que hayas agregado.  
+4. Ajusta los parámetros cuantas veces desees para comparar diferentes escenarios y encontrar la estrategia más conveniente para tu situación financiera.
+
+Con esta calculadora, podrás comprender mejor tu crédito, planear pagos adicionales y optimizar el uso de tus recursos para reducir la carga financiera a largo plazo.
+""")
+
+# Configuración de la barra lateral
 
 st.sidebar.header("Parámetros del Crédito")
 credito_total = st.sidebar.number_input("Crédito Total (MXN)", value=968374.92, step=1000.0)
